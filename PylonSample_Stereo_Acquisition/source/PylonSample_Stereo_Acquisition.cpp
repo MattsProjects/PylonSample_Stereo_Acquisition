@@ -69,7 +69,7 @@ const int c_width = 640;
 const int c_height = 480;
 const int c_exposureTime = 30000;
 const String_t c_pixelFormat = "Mono8";
-// INSTANT CAMERA: PHYSICAL CAMERA GIGE TRANSMISSION SETTINGS (note: these will probably need to be adjusted based on actual use case to prevent packet collisions and dropped frames (buffers incompletely grabbed))
+// INSTANT CAMERA: PHYSICAL CAMERA GIGE TRANSMISSION SETTINGS (note: These MUST be adjusted for the actual application and system to prevent packet collisions and dropped frames (buffers incompletely grabbed))
 const int c_packetSize_LeftCamera = 1500;
 const int c_interpacketDelay_LeftCamera = 0;
 const int c_frameTransmissionDelay_LeftCamera = 0;
@@ -82,7 +82,7 @@ const int c_maxNumBuffer = 200; // If writing a video, the more buffers the bett
 const int c_maxNumQueuedBuffer = c_maxNumBuffer; // Queue up all the allocated buffers to make as many as possible ready to receive images.
 // PTP SETTINGS 
 const bool c_usingPTP = true;
-const int c_timeToSyncPTP = 10; // PTP requires some setup time to find the synchronization between the clocks.
+const int c_timeToSyncPTP = 60; // PTP requires some setup time to find the synchronization between the clocks.
 // VIDEO RECORDING SETTINGS
 const bool c_recordingToMp4 = false;
 const bool c_recordingToAvi = true;
